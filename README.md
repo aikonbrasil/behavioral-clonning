@@ -57,7 +57,7 @@ In the previous section we performed a general description of the code, in this 
 
 Dataset was split in order to generate 3 groups for training, validation, and test. The architecture used Adam optimizer. The training result was done successfully considering 5 epochs. As our training result does not show any over-fitting (compatible results between training and evaluation losses), it was not necessary to use any dropout layer
 
-The input dataset of the architecture was normalized. The following layers (suggested by the NVIDIA model) define the architecture described in detail in Fig. 1
+The input dataset of the architecture was normalized. The following layers (suggested by the NVIDIA model) define the architecture described in detail in Fig. 1 (I considered some dropout = 0.5, batch-normalization, and pooling tools in order to avoid overfitting)
 
 .![alt text][image1]
 
