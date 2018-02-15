@@ -2,6 +2,9 @@
 [image1]: ./data_pictures/cnn_architecture.png "NN_architecture"
 [image2]: ./data_pictures/data_set_BEFORE.png "DataSetBeforeProcessing"
 [image3]: ./data_pictures/data_set_AFTER.png "DataSetAfterProcessing"
+[image4]: ./data_pictures/nVidia_model.png "nVidia architecture"
+
+
 
 # Behavioral-clonning Project
 A Neural network (CNN and NN) for end-to-end driving in virtual track, using  Keras and TensorFlow
@@ -50,7 +53,7 @@ The input dataset of the architecture was normalized. The following layers (sugg
 
 Our main reference was the NVIDIA architecture that is shown in the next Figure
 
-
+.![alt text][image4]
 
 It is important to mention that the input dataset were cropped and resized to 66x200 as suggested by NVIDIA model.
 
