@@ -28,6 +28,7 @@ In this case we used the vector 'csv_files_vector' with the next paths:
 * '../custome_data_mountains1/driving_log.csv' that contains custom dataset generated in the second track
 
 The next step is to get dataset information in numpy arrays considering the suggested offset for every angle (called measurement in the code) information for left and right cameras. It is also applied a simple filter in the dataset in order to avoid data with speed < 0.1. An additional action that was performed is to equalize the samples quantity of every angle used to train the model.
+
 ![alt text][image2]
 
 ![alt text][image3]
