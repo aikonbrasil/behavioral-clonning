@@ -1,3 +1,9 @@
+install.packages("vembedr")
+
+[image1]: ./data_pictures/cnn_architecture.png "NN_architecture"
+[image2]: ./data_pictures/data_set_BEFORE.png "DataSetBeforeProcessing"
+[image3]: ./data_pictures/data_set_AFTER.png "DataSetAfterProcessing"
+
 # Behavioral-clonning Project
 A Neural network (CNN and NN) for end-to-end driving in virtual track, using  Keras and TensorFlow
 
@@ -23,6 +29,9 @@ In this case we used the vector 'csv_files_vector' with the next paths:
 * '../custome_data_mountains1/driving_log.csv' that contains custom dataset generated in the second track
 
 The next step is to get dataset information in numpy arrays considering the suggested offset for every angle (called measurement in the code) information for left and right cameras. It is also applied a simple filter in the dataset in order to avoid data with speed < 0.1. An additional action that was performed is to equalize the samples quantity of every angle used to train the model.
+![alt text][image2]
+
+![alt text][image3]
 
 The next section of the code is focused to define the Neural Network architecture, in this case in order to facilitate the learning process, we used the Nvidia model suggested by this course.
 
@@ -37,7 +46,7 @@ Dataset was split in order to generate 3 groups for training, validation, and te
 
 The input dataset of the architecture was normalized. The following layers (suggested by the NVIDIA model) define the architecture described in detail in Fig. 1
 
-.
+.![alt text][image1]
 
 It is important to mention that the input dataset were resized to 66x200 as suggested by NVIDIA model.
 
