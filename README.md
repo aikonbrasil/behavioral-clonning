@@ -1,4 +1,6 @@
-install.packages("vembedr")
+devtools::install_github("ijlyttle/vembedr")
+
+
 
 [image1]: ./data_pictures/cnn_architecture.png "NN_architecture"
 [image2]: ./data_pictures/data_set_BEFORE.png "DataSetBeforeProcessing"
