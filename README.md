@@ -3,7 +3,7 @@
 [image2]: ./data_pictures/data_set_BEFORE.png "DataSetBeforeProcessing"
 [image3]: ./data_pictures/data_set_AFTER.png "DataSetAfterProcessing"
 [image4]: ./data_pictures/nVidia_model.png "nVidia architecture"
-[image5]: ./data_pictures/center_2018_02_15_14_17_38_643 "Dataset Center path"
+[image5]: ./data_pictures/center_2018_02_15_14_17_38_643.jpg "Dataset Center path"
 [image6]: ./data_pictures/center_2018_02_15_14_18_33_322.jpg "Recovery data set 1"
 [image7]: ./data_pictures/center_2018_02_15_14_19_01_022.jpg "Recovery data set 2"
 [image8]: ./data_pictures/center_2018_02_15_14_19_33_423.jpg "Recovery data set 3"
