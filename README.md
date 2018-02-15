@@ -1,4 +1,4 @@
-[![Alt text](https://img.youtube.com/vi/VID/0.jpg)](https://www.youtube.com/watch?v=VID)
+[![](https://img.youtube.com/vi/VID/0.jpg)](https://www.youtube.com/watch?v=VID)
 
 [image1]: ./data_pictures/cnn_architecture.png "NN_architecture"
 [image2]: ./data_pictures/data_set_BEFORE.png "DataSetBeforeProcessing"
