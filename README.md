@@ -3,6 +3,11 @@
 [image2]: ./data_pictures/data_set_BEFORE.png "DataSetBeforeProcessing"
 [image3]: ./data_pictures/data_set_AFTER.png "DataSetAfterProcessing"
 [image4]: ./data_pictures/nVidia_model.png "nVidia architecture"
+[image5]: ./data_pictures/center_2018_02_15_14_17_38_643 "Dataset Center path"
+[image6]: ./data_pictures/center_2018_02_15_14_18_33_322.jpg "Recovery data set 1"
+[image7]: ./data_pictures/center_2018_02_15_14_19_01_022.jpg "Recovery data set 2"
+[image8]: ./data_pictures/center_2018_02_15_14_19_33_423.jpg "Recovery data set 3"
+[image9]: ./data_pictures/center_2018_02_15_14_21_23_356.jpg "Driving counter-clockwise"
 
 
 
@@ -69,7 +74,37 @@ As a complement, we used the same training code to create a model for self-drivi
 
 [![run2](https://img.youtube.com/vi/XGjJAwd4Phc/0.jpg)](https://www.youtube.com/watch?v=XGjJAwd4Phc "Track_2")
 
+# Second Revision issues
+## Train/validation/test splits have been used, and the model uses dropout layers or other methods to reduce overfitting
+As suggested by the reviewer we added some techniques to prevent overfitting in order to make the model more generalized. We used pooling layers, batch normalization, L2 regularizers. That is why that file model.py was updated.
 
+## Model description in this writeup
+I am really sorry to miss of this important section. The data was collected in 2 laps around the track in normal direction and 1 lap driving in reverse mode (driving counter-clockwise). I created recover data driving near limit lines of potential points in which the car could confuse the path, when the car was near a specific border line I recover the drive direction to the middle of the road. In other cases I teach the car what to do when it’s off on the side of the road, it was performed constantly wander off to the side of the road and then steer back to the middle
 
+In the 'generate_training_data()' function  perform a simple algorithm to apply data augmentation in order to train the model with duplicated information based on the next condition: "steering angle > 0.33". If the previous condition is True, the code applied a horizontal flip of the image and invert the steer angle multiplying the original value with -1. Other augmentation technique was to use the information of 3 cameras (center, left and right).
 
+An important pre-processing is done in the code, it is called normalization. It is done in order to equalize the distribution of feature values and compensate a correction in one weight dimension while under-compensating in another.
 
+A disadvantage of the RGB representation  is that the channels  are very correlated,  as all of them
+include a representation of brightness.  For example the brightness information can be recognized from R, G and B channels shown separately. In the case of YUV, the Y channel describes the range of value between dark and light, the U and V chrominance channels subtract the Luminance values from Red (U) and Blue (V) to represent the colour only information (without brightness).[http://www.robots.ox.ac.uk/~teo/thesis/Thesis/deCampos3DHandTrackingApp.pdf]
+
+### Creation of the Training Set & Training Processing
+To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
+
+![alt text][image5]
+
+Example of Recovering dataset 1 in the boarder of the bridge
+
+![alt text][image6]
+
+Example of Recovering dataset 2
+
+![alt text][image7]
+
+Example of Recovering dataset 3
+
+![alt text][image8]
+
+Example driving counter-clockwise
+
+![alt text][image9]
