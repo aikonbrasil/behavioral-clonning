@@ -88,9 +88,9 @@ The following image shows the code updated for this second Revision
 ![alt text][image14]
 
 ## Model description in this writeup
-I am really sorry to miss of this important section. The data was collected in 2 laps around the track in normal direction and 1 lap driving in reverse mode (driving counter-clockwise). I created recover data driving near limit lines of potential points in which the car could confuse the path, when the car was near a specific border line I recover the drive direction to the middle of the road. In other cases I teach the car what to do when it’s off on the side of the road, it was performed constantly wander off to the side of the road and then steer back to the middle
+I am really sorry to miss this important section. The data was collected in 2 laps around the track in normal direction and 1 lap driving in reverse mode (driving counter-clockwise). I created recover data driving near limit lines of potential points in which the car could confuse the path, when the car was near a specific border line I recover the drive direction to the middle of the road. In other cases I teach the car what to do when it’s off on the side of the road, it was performed constantly wander off to the side of the road and then steer back to the middle
 
-In the 'generate_training_data()' function  perform a simple algorithm to apply data augmentation in order to train the model with duplicated information based on the next condition: "steering angle > 0.33". If the previous condition is True, the code applied a horizontal flip of the image and invert the steer angle multiplying the original value with -1. Other augmentation technique was to use the information of 3 cameras (center, left and right).
+In the 'generate_training_data()' function the code performs a simple algorithm to apply data augmentation in order to train the model with duplicated information based on the next condition: "steering angle > 0.33". If the previous condition is True, the code applied a horizontal flip of the image and invert the steer angle multiplying the original value with -1. Other augmentation technique was to use the information of 3 cameras (center, left and right) with its respective offset (as suggested by the instructors).
 
 An important pre-processing is done in the code, it is called normalization. It is done in order to equalize the distribution of feature values and compensate a correction in one weight dimension while under-compensating in another.
 
@@ -120,18 +120,18 @@ Example driving counter-clockwise
 
 ### Preprocessing of Dataset to Optimize Learning Process
 
-Original image
+Original image (160x320x3)
 
 ![alt text][image10]
 
-Converting RGB image to UVW image and cropping to 22x120
+Converting RGB image to UVW image and cropping to (66x200x3)
 
 ![alt text][image11]
 
-Applying some noise and wrap pespective to one section of the images
+Applying some noise and wrap perspective to one section of the images
 
 ![alt text][image12]
 
-Finally image used to train the neural network (In this case we used RGB just to visualization)
+The following image represents the dataset used to train the neural network (In this case we used RGB just to visualization)
 
 ![alt text][image13]
