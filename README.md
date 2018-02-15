@@ -33,7 +33,7 @@ The next step is to get dataset information in numpy arrays considering the sugg
 
 ![alt text][image3]
 
-The next section of the code is focused to define the Neural Network architecture, in this case in order to facilitate the learning process, we used the Nvidia model suggested by this course.
+The next section of the code is focused to define the Neural Network architecture, in this case in order to facilitate the learning process, we used the Nvidia model suggested by this online course instructors.
 
 Before to train the neural network model, we used a function called 'generate_training_data' that generate variables using the function yield instead of return (it was done following the suggestions of Udacity team).
 
@@ -48,7 +48,11 @@ The input dataset of the architecture was normalized. The following layers (sugg
 
 .![alt text][image1]
 
-It is important to mention that the input dataset were resized to 66x200 as suggested by NVIDIA model.
+Our main reference was the NVIDIA architecture that is shown in the next Figure
+
+
+
+It is important to mention that the input dataset were cropped and resized to 66x200 as suggested by NVIDIA model.
 
 During the training process it was evident the high performance of the learning process of the neural network when camera images were resized from 160x320x3  to  66x200x3. Other important issue is that a Gaussian noise were added to dataset used for training.
 
