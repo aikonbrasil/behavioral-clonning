@@ -91,20 +91,20 @@ include a representation of brightness.  For example the brightness information 
 ### Creation of the Training Set & Training Processing
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
 
-![alt text][image5]
+.![alt text][image5]
 
 Example of Recovering dataset 1 in the boarder of the bridge
 
-![alt text][image6]
+.![alt text][image6]
 
 Example of Recovering dataset 2
 
-![alt text][image7]
+.![alt text][image7]
 
 Example of Recovering dataset 3
 
-![alt text][image8]
+.![alt text][image8]
 
 Example driving counter-clockwise
 
-![alt text][image9]
+.![alt text][image9]
