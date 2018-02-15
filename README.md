@@ -1,4 +1,3 @@
-[![run1](https://img.youtube.com/vi/SlR43dn2uf0/0.jpg)](https://www.youtube.com/watch?v=SlR43dn2uf0 "R1")
 
 [image1]: ./data_pictures/cnn_architecture.png "NN_architecture"
 [image2]: ./data_pictures/data_set_BEFORE.png "DataSetBeforeProcessing"
@@ -55,7 +54,12 @@ During the training process it was evident the high performance of the learning 
 ## Simulation Results
 After training the Python code generated the model file called 'model.h5' that was used to run the driving simulator to control the car in autonomous mode. The result could be visualized in the next video. In all cases the car is always in the middle of the road without any incident that hypothetical could injure the car human user.
 
+[![run1](https://img.youtube.com/vi/SlR43dn2uf0/0.jpg)](https://www.youtube.com/watch?v=SlR43dn2uf0 "Track_1")
+
+
 As a complement, we used the same training code to create a model for self-driving car simulator in the second track. The result were satisfactory, in this particular case we increased the dataset used to train the model and considered 25 epochs. It is possible to check the result in the next video.
+
+[![run2](https://img.youtube.com/vi/XGjJAwd4Phc/0.jpg)](https://www.youtube.com/watch?v=XGjJAwd4Phc "Track_2")
 
 
 
