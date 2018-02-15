@@ -9,6 +9,11 @@
 [image8]: ./data_pictures/center_2018_02_15_14_19_33_423.jpg "Recovery data set 3"
 [image9]: ./data_pictures/center_2018_02_15_14_21_23_356.jpg "Driving counter-clockwise"
 
+[image10]: ./data_pictures/image1.png ""
+[image11]: ./data_pictures/image2.png ""
+[image12]: ./data_pictures/image3.png ""
+[image13]: ./data_pictures/image4.png ""
+[image14]: ./data_pictures/script_update.png ""
 
 
 # Behavioral-clonning Project
@@ -78,6 +83,10 @@ As a complement, we used the same training code to create a model for self-drivi
 ## Train/validation/test splits have been used, and the model uses dropout layers or other methods to reduce overfitting
 As suggested by the reviewer we added some techniques to prevent overfitting in order to make the model more generalized. We used pooling layers, batch normalization, L2 regularizers. That is why that file model.py was updated.
 
+The following image shows the code updated for this second Revision
+
+![alt text][image14]
+
 ## Model description in this writeup
 I am really sorry to miss of this important section. The data was collected in 2 laps around the track in normal direction and 1 lap driving in reverse mode (driving counter-clockwise). I created recover data driving near limit lines of potential points in which the car could confuse the path, when the car was near a specific border line I recover the drive direction to the middle of the road. In other cases I teach the car what to do when it’s off on the side of the road, it was performed constantly wander off to the side of the road and then steer back to the middle
 
@@ -88,23 +97,41 @@ An important pre-processing is done in the code, it is called normalization. It 
 A disadvantage of the RGB representation  is that the channels  are very correlated,  as all of them
 include a representation of brightness.  For example the brightness information can be recognized from R, G and B channels shown separately. In the case of YUV, the Y channel describes the range of value between dark and light, the U and V chrominance channels subtract the Luminance values from Red (U) and Blue (V) to represent the colour only information (without brightness).[http://www.robots.ox.ac.uk/~teo/thesis/Thesis/deCampos3DHandTrackingApp.pdf]
 
-### Creation of the Training Set & Training Processing
+### Creation of the Training Set
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
 
-.![alt text][image5]
+![alt text][image5]
 
-Example of Recovering dataset 1 in the boarder of the bridge
+I then recorded the vehicle recovering from the right side. The following image represents an example of Recovering dataset 1 in the border of the bridge
 
-.![alt text][image6]
+![alt text][image6]
 
-Example of Recovering dataset 2
+I then recorded the vehicle recovering from the right side. The following image represents an example of Recovering dataset 2 in the border of the bridge
 
-.![alt text][image7]
+![alt text][image7]
 
-Example of Recovering dataset 3
+I then recorded the vehicle recovering from the left side. The following image represents an example of Recovering dataset 3 in the border of the bridge
 
-.![alt text][image8]
+![alt text][image8]
 
 Example driving counter-clockwise
 
-.![alt text][image9]
+![alt text][image9]
+
+### Preprocessing of Dataset to Optimize Learning Process
+
+Original image
+
+![alt text][image10]
+
+Converting RGB image to UVW image and cropping to 22x120
+
+![alt text][image11]
+
+Applying some noise and wrap pespective to one section of the images
+
+![alt text][image12]
+
+Finally image used to train the neural network (In this case we used RGB just to visualization)
+
+![alt text][image13]
